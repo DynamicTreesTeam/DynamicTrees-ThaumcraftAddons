@@ -2,7 +2,6 @@ package maxhyper.dynamictreesthaumicbases.event;
 
 import com.ferreusveritas.dynamictrees.ModConstants;
 import com.ferreusveritas.dynamictrees.api.TreeRegistry;
-import com.rumaruka.thaumicbases.utils.TBConfig;
 import maxhyper.dynamictreesthaumicbases.DynamicTreesThaumcraftAddons;
 import com.rumaruka.thaumicbases.init.TBBlocks;
 import net.minecraft.init.Blocks;
@@ -40,11 +39,9 @@ public class RecipeHandler  {
         InfusionRecipe enderSapling = new InfusionRecipe("TB.TREE1", new ItemStack(TBBlocks.endersapling),4,new AspectList().add(Aspect.PLANT,48).add(Aspect.AURA,64), new ItemStack(Blocks.SAPLING,1,0),new ItemStack(Items.ENDER_PEARL),new ItemStack(Items.ENDER_PEARL),new ItemStack(Items.ENDER_EYE),new ItemStack(Items.ENDER_EYE));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("TB.enderSaplingOld"),enderSapling);
 
-        if(TBConfig.allowTobacco){
-            CrucibleRecipe catusSeedToRCSeed= new CrucibleRecipe("TB.CACTUS",rainbowCactusSeed,cactusSeed,new AspectList().add(Aspect.PLANT,35).add(Aspect.MAGIC,15));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("TB.catusToRC"),catusSeedToRCSeed);
-            CrucibleRecipe catusToRC= new CrucibleRecipe("TB.CACTUS",new ItemStack(TBBlocks.rainbowcactus),new ItemStack(Blocks.CACTUS),new AspectList().add(Aspect.PLANT,35).add(Aspect.MAGIC,15));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("TB.catusToRCOld"),catusToRC);
-        }
+        CrucibleRecipe catusSeedToRCSeed= new CrucibleRecipe("TB.CACTUS",rainbowCactusSeed,cactusSeed,new AspectList().add(Aspect.PLANT,35).add(Aspect.MAGIC,15));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("TB.catusToRC"),catusSeedToRCSeed);
+        CrucibleRecipe catusToRC= new CrucibleRecipe("TB.CACTUS",new ItemStack(TBBlocks.rainbowcactus),new ItemStack(Blocks.CACTUS),new AspectList().add(Aspect.PLANT,35).add(Aspect.MAGIC,15));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("TB.catusToRCOld"),catusToRC);
     }
 }
